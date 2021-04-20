@@ -176,6 +176,15 @@ public class ElevensBoard {
 	}
 
 	/**
+	 * Deal cards to this board to start the game.
+	 */
+	private void dealMyCards() {
+		for (int k = 0; k < cards.length; k++) {
+			cards[k] = deck.deal();
+		}
+	}
+
+	/**
 	 * Determines if the selected cards form a valid group for removal.
 	 * In Elevens, the legal groups are (1) a pair of non-face cards
 	 * whose values add to 11, and (2) a group of three cards consisting of
@@ -198,16 +207,6 @@ public class ElevensBoard {
 	 */
 	public boolean anotherPlayIsPossible() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 9 *** */
-	}
-
-
-	/**
-	 * Deal cards to this board to start the game.
-	 */
-	private void dealMyCards() {
-		for (int k = 0; k < cards.length; k++) {
-			cards[k] = deck.deal();
-		}
 	}
 
 	/**
